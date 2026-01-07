@@ -161,4 +161,4 @@ async function deleteDocument(req, res) {
     }
 }
 
-module.exports = {storeDocument,getDocument, updateDocument, deleteDocument }
+module.exports = {storeDocument,getDocument, updateDocument, deleteDocument } 

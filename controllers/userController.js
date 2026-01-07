@@ -239,4 +239,4 @@ async function logout(req, res) {
 
 module.exports = {
      createUser, login, getUser, updateUser, deleteUser, logout
-}
+} 

@@ -172,4 +172,4 @@ async function deleteCart(req, res) {
   }
 }
 
-module.exports = {addcart, cart, updateCart,deleteCart}
+module.exports = {addcart, cart, updateCart,deleteCart} 

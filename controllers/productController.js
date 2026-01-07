@@ -108,5 +108,5 @@ async function updateproduct(req, res) {
         });
     }
 }
-
+ 
 module.exports = {addproduct, getproduct, updateproduct}

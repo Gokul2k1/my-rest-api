@@ -68,5 +68,5 @@ async function getcategory(req, res) {
     
 }
 
-module.exports = {addcategory, deletecategory, getcategory}
+module.exports = {addcategory, deletecategory, getcategory} 
 
