@@ -7,6 +7,7 @@ const productController = require('../controllers/productController');
 const cartController = require('../controllers/cartController');
 const categoryController = require('../controllers/categoryController');
 const auth = require('../middleware/auth');
+const adminAuth = require('../middleware/admin');
 const upload = require('../middleware/uploadMiddleware');
 const orderController = require('../controllers/orderController');
 
@@ -15,7 +16,7 @@ router.post('/createUser', userController.createUser);
 router.post('/login', userController.login);
 router.get('/getUser', auth, userController.getUser);
 router.post('/updateUser',auth, userController.updateUser);
-router.post('/deleteUser', auth, userController.deleteUser);
+router.post('/deleteUser', auth,adminAuth,userController.deleteUser);
 router.post('/logout', auth, userController.logout);
 
 //? Address Routes
@@ -31,9 +32,9 @@ router.put('/updateDocument/:id', auth, upload.single('image'), documentControll
 router.delete('/deleteDocument/:id', auth, documentController.deleteDocument);
 
 //& Product Routes
-router.post('/addproduct', auth, productController.addproduct);
+router.post('/addproduct', auth, adminAuth,productController.addproduct);
 router.get('/getproduct', auth, productController.getproduct);
-router.patch('/updateproduct/:id', auth, productController.updateproduct);
+router.patch('/updateproduct/:id', auth, adminAuth,productController.updateproduct);
 
 //! cart routes
 router.post('/addcart', auth, cartController.addcart);

@@ -84,7 +84,8 @@ async function login(req, res) {
       {
         id: extMail.id,
         email: extMail.email,
-        name: extMail.name
+        name: extMail.name,
+         is_admin: extMail.is_admin,
       },
       
       process.env.JWT_SECRET,
@@ -238,5 +239,4 @@ async function logout(req, res) {
 
 
 module.exports = {
-     createUser, login, getUser, updateUser, deleteUser, logout
-} 
+     createUser, login, getUser, updateUser, deleteUser, logout} 
