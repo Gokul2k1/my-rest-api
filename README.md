@@ -5,5 +5,5 @@ User can check the product availability.
 
 1. Designed and developed scalable RESTful APIs using Node js and Express js
 2. Used Mysql for database.
-3. Executed secure and efficient backend workflows to support e-commerce operations.
+3. Executed secure and efficient backend workflows to support e-commerce operations. 
 
