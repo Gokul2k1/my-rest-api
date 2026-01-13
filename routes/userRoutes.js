@@ -43,8 +43,8 @@ router.patch('/updateCart/:id', auth, cartController.updateCart);
 router.delete('/deleteCart/:id', auth, cartController.deleteCart);
 
 //? Category routes
-router.post('/addcategory',auth, categoryController.addcategory);
-router.delete('/deletecategory/:id', auth,  categoryController.deletecategory);
+router.post('/addcategory',auth, adminAuth,categoryController.addcategory);
+router.delete('/deletecategory/:id', auth, adminAuth, categoryController.deletecategory);
 router.get('/getcategory',categoryController.getcategory);
 
 //* Order route
